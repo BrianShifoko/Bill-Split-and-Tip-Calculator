@@ -1,0 +1,259 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+    background-color: #e4f8f9;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+}
+
+.header {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 1.5em;
+    color: #000;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
+}
+
+.currency-selector label {
+    font-size: 1.2em;
+    color: #000;
+    font-weight: bold;
+}
+
+select {
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
+    margin-bottom: 15px;
+}
+
+.split-label {
+    font-size: 1.2em;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+#split-count {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.split-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.8em;
+}
+
+#bill-total + label,
+#tip-slider + label,
+#tip-amount + label,
+#total-per-person + label {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+input[type="range"] {
+    width: 70%;
+    margin: 0 10px;
+    height: 15px;
+    background: linear-gradient(to right, #007bff, #a1c4fd);
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.splat {
+    position: absolute;
+    top: -20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 123, 255, 0.5);
+    border-radius: 50%;
+    animation: splatAnimation 1s ease;
+}
+
+@keyframes splatAnimation {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.total, .tip-amount, .total-per-person {
+    font-size: 1.5em;
+    color: #000;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.currency-symbol {
+    font-size: 1.2em;
+    color: #000;
+}
+
+.tip-amount, .total-per-person {
+    margin-top: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .header {
+        font-size: 1.8em;
+    }
+
+    .label, .split-label {
+        font-size: 1.2em;
+    }
+
+    input[type="number"], select, button {
+        font-size: 1em;
+    }
+
+    #split-count {
+        font-size: 1em;
+    }
+
+    .total, .tip-amount, .total-per-person {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .header {
+        font-size: 1.5em;
+    }
+
+    .label, .split-label {
+        font-size: 1em;
+    }
+
+    input[type="number"], select, button {
+        font-size: 0.8em;
+    }
+
+    #split-count {
+        font-size: 0.8em;
+    }
+
+    .total, .tip-amount, .total-per-person {
+        font-size: 1em;
+    }
+}

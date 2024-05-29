@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Split & Tip CAlculator</title>
+    <link rel="icon" href="images/split_bill.webp" >
+    <link rel="stylesheet" href="app.css">
+    <meta name="author" content="Brian Shifoko">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Bill Total
+        </div>
+        <div class="section">
+            <label for="bill-total" class="label">Enter Bill Total:</label>
+            <input type="number" id="bill-total" value="0.00" min="0" step="0.10">
+        </div>
+        <div class="currency-selector">
+            <label for="currency" class="label">Currency:</label>
+            <select id="currency">
+                <option value="$">$ USD</option>
+                <option value="€">€ EUR</option>
+                <option value="£">£ GBP</option>
+                <option value="$">$ AUD</option>
+                <option value="¥">¥ JPY</option>
+                <option value="﷼">﷼ QAR</option>
+                <option value="Ksh">KES</option>
+                <option value="TZS">TZS</option>
+                <option value="UGX">UGX</option>
+                <option value="UGX">UGX</option>
+                <!-- Add currencies as per country -->
+            </select>
+        </div>
+        <div class="section">
+            <label class="split-label">Split</label>
+            <div class="split-controls">
+                <button id="decrease">−</button>
+                <span id="split-count">1</span>
+                <button id="increase">+</button>
+            </div>
+        </div>
+        <div class="section">
+            <label class="label">Tip percent</label>
+            <div class="slider-container">
+                <span id="tip-percent">50%</span>
+                <input type="range" id="tip-slider" min="0" max="100" value="0">
+            </div>
+        </div>
+        <div class="section">
+            <label class="label">Tip Amount</label>
+            <div class="tip-amount">
+                <span id="currency-symbol-tip">$ </span><span id="tip-amount"> 0.00</span>
+            </div>
+        </div>
+        <div class="section">
+            <label class="label">Total per person</label>
+            <div class="total-per-person">
+                <span id="currency-symbol-total">$ </span><span id="total-per-person"> 0.00</span>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
