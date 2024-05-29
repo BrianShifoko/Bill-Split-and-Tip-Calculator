@@ -1,9 +1,12 @@
 # Bill Split & Tip Calculator
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cc4e7b01-b9d0-4f0b-a6e7-f46e6ad21c9d/deploy-status)](https://app.netlify.com/sites/brianshifoko-bill-split-tip-calc/deploys)
+
 This is a responsive web application that allows users to calculate the total bill per person, including tip, when splitting a bill among multiple people. The app supports different currencies and provides an interactive slider for adjusting the tip percentage.
 
 ## To run the project
-click this link :
+[Bill Split & Tip Calculator](https://brianshifoko-bill-split-tip-calc.netlify.app/)
+
 
 
 ## Features
@@ -32,9 +35,9 @@ click this link :
 - Adjust the tip percentage using the slider.
 - The tip amount and total per person will be automatically calculated and displayed.
 
-## Screenshots
+## Screenshot
 
-![Calculator Screenshot](images/Bill%20Calculator%20Screenshot.png)
+![Bill Split Calculator Screenshot](images/Bill%20Calculator%20Screenshot.png)
 
 ## Author
 
